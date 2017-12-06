@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title class="text-center">Towards an Understanding of Our World by GANing Videos in the Wild</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1>
+					Towards an Understanding of Our World by GANing Videos in the Wild
+				</h1>
+			</div> 
+			<div class="text-center">
+				<strong> Bernhard Kratzwald, Zhiwu Huang, Danda Pani Paudel, Luc Van Gool </strong> <br/>
+				Computer Vision Lab, ETH Zurich, Switzerland
+				<p>Links: <a href="https://github.com/bernhard2202/improved-video-gan" class="badge badge-dark">GitHub</a>
+			<a href="https://arxiv.org/abs/1711.11453" class="badge badge-success">Paper</a>
+			</div>
+			
+		</div>
+	</div>
+	<div class="row">
+			<div class="col-md-1">
+		</div>
+		<div class="col-md-10">
+			<h2 class="text-center">
+				Abstract
+			</h2>
+			<p class="text-center">
+				Existing generative video models work well only for
+videos with a static background. For dynamic scenes, applications
+of these models demand an extra pre-processing
+step of background stabilization. In fact, the task of background
+stabilization may very often prove impossible for
+videos in the wild. To the best of our knowledge, we present
+the first video generation framework that works in the wild,
+without making any assumption on the videos’ content. This
+allows us to avoid the background stabilization step, completely.
+The proposed method also outperforms the state-of-the-
+art methods even when the static background assumption
+is valid. This is achieved by designing a robust onestream
+video generation architecture by exploiting Wasserstein
+GAN frameworks for better convergence. Since the
+proposed architecture is one-stream, which does not formally
+distinguish between fore- and background, it can generate
+and learn from videos with dynamic backgrounds.
+The superiority of our model is demonstrated by successfully
+applying it to three challenging problems: video colorization,
+video inpainting, and future prediction.
+			</p>
+		</div>
+		<div class="col-md-1">
+		</div>
+
+	</div>
+	
+	<div class="row">
+		<div class="col-md-12">
+			<h2 class="text-center">
+				How to reproduce the results 
+			</h2>
+			<div class="text-center">
+				<p>The code for all the models is available at our <a href="https://github.com/bernhard2202/improved-video-gan" class="badge badge-dark">GitHub</a></p><p>Datasets with static background are available <a href="http://carlvondrick.com/tinyvideo/" class="badge badge-dark">here</a></p><p> Non-static datasets can be aquired <a href="https://github.com/bernhard2202/improved-video-gan/tree/master/extra" class="badge badge-dark">here</a></p><p> If you have any questions left, please feel free to reach out to us: bkratzwald (at) ethz (dot) ch</p> 
+			
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<h2 class="text-center">
+				Generation with static background
+			</h2>
+			<div class="text-center">
+
+			<img alt="Generation of static golf videos" src="golf.gif" />
+	</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<h2 class="text-center">
+				Generation with non-static background
+		</h2>
+		<p class="text-center">If you wish to see more results, or results on other datasets, please write an e-mail to bkratzwald (at) ethz (dot) ch<p>
+		<div class="col-md-4">
+			<p class="text-center">
+				<strong>VGAN (one-stream)</strong>
+			</p>
+			<div class="text-center">
+
+			<img alt="Generation of non-static videos with one-stream VGAN" src="ap1s.gif" />
+			</div>
+		</div>
+		<div class="col-md-4">
+			<p class="text-center">
+				<strong>VGAN (two-stream)</strong>
+			</p>
+			<div class="text-center">
+
+			<img alt="Generation of non-static videos with two-stream VGAN" src="ap2s.gif" />
+			</div>
+		</div>
+		<div class="col-md-4">
+			<p class="text-center">
+				<strong>iVGAN (ours)</strong>
+			</p>
+			<div class="text-center">
+
+			<img alt="Generation of non-static videos with our iVGAN" src="ap_ivgan.gif" />
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<h2 class="text-center">
+				Video Colorization
+		</h2>
+				<p class="text-center"> A demo video how this can be used to colorize HD-videos can be found <a href="https://www.youtube.com/edit?o=U&video_id=j-1VQ3uEMCM">here</a>. </p>
+
+				<div class="col-md-1">
+		</div>
+			<div class="col-md-5">
+			<p class="text-center">
+				<strong>gray-scale input</strong>
+			</p>
+			<div class="text-center">
+
+			<img alt="BW videos" src="bw.gif" />
+			</div>
+		</div>
+			<div class="col-md-5">
+			<p class="text-center">
+				<strong>rgb output</strong>
+			</p>
+			<div class="text-center">
+
+			<img alt="Colorized outputs" src="col.gif" />
+			</div>		<div class="col-md-1">
+		</div>
+		</div>
+	</div>
+		<div class="row">
+		<h2 class="text-center">
+				Video Inpainting
+		</h2>
+		<p class="text-center"> For boxes centered in the screen. </p>
+						<div class="col-md-1">
+		</div>
+			<div class="col-md-5">
+			<p class="text-center">
+				<strong>input</strong>
+			</p>
+			<div class="text-center">
+
+			<img alt="BW videos" src="in.gif" />
+			</div>
+		</div>
+			<div class="col-md-5">
+			<p class="text-center">
+				<strong>output</strong>
+			</p>
+			<div class="text-center">
+
+			<img alt="Colorized outputs" src="out.gif" />
+			</div>		<div class="col-md-1">
+		</div>
+		</div>
+	</div>
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
