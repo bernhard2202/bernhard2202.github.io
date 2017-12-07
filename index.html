@@ -36,7 +36,7 @@
 		<div class="row">
 			<div class="col-sm-1 col-md-2 col-lg-3"></div>
 			<div class="col-sm-10 col-md-8 col-lg-6">
-				<h2 class="text-center">Abstract</h2>
+				<h1 class="text-center">Abstract</h1>
 				<p class="text-justify">
 					Existing generative video models work well only for
 					videos with a static background. For dynamic scenes, applications
@@ -108,10 +108,26 @@
 		<div class="row"><div class="col-md-12"><p> </p> </div></div>
 
 		<div class="row">
-			<h2 class="text-center">
+			<div class="col-sm-1 col-md-2 col-lg-3"></div>
+			<div class="col-sm-10 col-md-8 col-lg-6">
+				<h2 class="text-center">
 					Generation with non-static background
-			</h2>
-			<p class="text-center">If you wish to see more results, or results on other datasets, please write an e-mail to bkratzwald (at) ethz (dot) ch<p>
+				</h2>
+				<p class="text-align">We design a stable architecture with
+					no prior constraints on the training data. More precisely,
+					we design a one-stream generation framework that does
+					not formally distinguish between fore- and background, allowing
+					us to handle videos with moving backgrounds/cameras.
+					Video generation in a single-stream is a fragile task,
+					demanding a carefully selected architecture within a stable
+					optimization framework. We accomplish such stability
+					by exploiting state-of-the-art Wasserstein GAN frameworks
+					in the context of video generation.</p>
+				<p class="text-center">If you wish to see more results, or results on other datasets, please write an e-mail to bkratzwald (at) ethz (dot) ch<p>
+			</div>
+			<div class="col-sm-1 col-md-2 col-lg-3"></div>
+		</div>
+		<div class="row">
 			<div class="col-sm-0 col-md-1 col-lg-2"></div>
 			
 			<div class="col-sm-12 col-md-10 col-lg-8">
@@ -148,10 +164,29 @@
 		<div class="row"><div class="col-md-12"><p> </p> </div></div>
 		
 		<div class="row">
+			<div class="col-sm-1 col-md-2 col-lg-3"></div>
+			<div class="col-sm-10 col-md-8 col-lg-6">
+				<h1 class="text-center">Applications</h1>
+				<p class="text-justify">
+					In a second step,
+we demonstrate the applicability of our model by proposing
+a general multifunctional framework dedicated to specific
+applications. Our extension augments the generation model
+with an auxiliary encoder network and an application specific
+loss function. With these modifications, we successfully conduct several experiments for unsupervised end-to-end video colorization,
+video inpainting, and future prediction.
+				</p>
+			</div>
+			<div class="col-sm-1 col-md-2 col-lg-3"></div>
+		</div>
+		
+		
+		
+		<div class="row">
 			<h2 class="text-center">
 					Video Colorization
 			</h2>
-			<p class="text-center"> A demo video how this can be used to colorize HD-videos can be found on <a class="btn btn-danger btn-xs" role="button"href="https://www.youtube.com/edit?o=U&video_id=j-1VQ3uEMCM">YouTube</a> </p>
+			<p class="text-center"> A demo video how this approach can be used to colorize HD-clips can be found on <a class="btn btn-danger btn-xs" role="button"href="https://www.youtube.com/edit?o=U&video_id=j-1VQ3uEMCM">YouTube</a> </p>
 			
 			<div class="col-sm-0 col-md-1 col-lg-2"></div>
 			<div class="col-sm-0 col-md-5 col-lg-4">
