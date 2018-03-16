@@ -21,11 +21,11 @@
 			<div class="col-md-12">
 				<div class="page-header">
 					<h1 class="text-center">
-						Towards an Understanding of Our World by GANing Videos in the Wild
+						Improving Video Generation for Multi-functional Applications
 					</h1>
 				</div> 
 				<div class="text-center">
-					<strong> Bernhard Kratzwald, Zhiwu Huang, Danda Pani Paudel, Luc Van Gool </strong> <br/>
+					<strong> Bernhard Kratzwald, Zhiwu Huang, Danda Pani Paudel, Acharya Dinesh, Luc Van Gool </strong> <br/>
 					Computer Vision Lab, ETH Zurich, Switzerland
 					<p><a href="https://github.com/bernhard2202/improved-video-gan" class="btn btn-primary btn-sm btn-info" role="button">GitHub</a>
 				<a href="https://arxiv.org/abs/1711.11453" class="btn btn-sm btn-success" role="button">Paper</a>
@@ -38,26 +38,7 @@
 			<div class="col-sm-10 col-md-8 col-lg-6">
 				<h1 class="text-center">Abstract</h1>
 				<p class="text-justify">
-					Existing generative video models work well only for
-					videos with a static background. For dynamic scenes, applications
-					of these models demand an extra pre-processing
-					step of background stabilization. In fact, the task of background
-					stabilization may very often prove impossible for
-					videos in the wild. To the best of our knowledge, we present
-					the first video generation framework that works in the wild,
-					without making any assumption on the videos’ content. This
-					allows us to avoid the background stabilization step, completely.
-					The proposed method also outperforms the state-of-the-
-					art methods even when the static background assumption
-					is valid. This is achieved by designing a robust onestream
-					video generation architecture by exploiting Wasserstein
-					GAN frameworks for better convergence. Since the
-					proposed architecture is one-stream, which does not formally
-					distinguish between fore- and background, it can generate
-					and learn from videos with dynamic backgrounds.
-					The superiority of our model is demonstrated by successfully
-					applying it to three challenging problems: video colorization,
-					video inpainting, and future prediction.
+					In this paper, we aim to improve the state-of-the-art video generative adversarial networks (GANs) with a view towards multi-functional applications. Our improved video GAN model does not separate foreground from background nor dynamic from static patterns, but learns to generate the entire video clip conjointly. Our model can thus be trained to generate---and learn from---a broad set of videos with no restriction. This is achieved by designing a robust one-stream video generation architecture with an extension of the state-of-the-art Wasserstein GAN framework that allows for better convergence. The experimental results show that our improved video GAN model outperforms state-of-the-art video generative models on multiple challenging datasets. Furthermore, we demonstrate the superiority of our model by successfully extending it to three challenging problems: video colorization, video inpainting, and future prediction. To the best of our knowledge, this is the first work using GANs to colorize and inpaint video clips.
 				</p>
 			</div>
 			<div class="col-sm-1 col-md-2 col-lg-3"></div>
